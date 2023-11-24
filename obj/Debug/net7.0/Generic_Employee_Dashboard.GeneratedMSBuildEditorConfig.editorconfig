@@ -1,0 +1,35 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Generic_Employee_Dashboard
+build_property.RootNamespace = Generic_Employee_Dashboard
+build_property.ProjectDir = C:\Users\kenan\source\repos\Generic_Employee_Dashboard\Generic_Employee_Dashboard\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\kenan\source\repos\Generic_Employee_Dashboard\Generic_Employee_Dashboard
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/kenan/source/repos/Generic_Employee_Dashboard/Generic_Employee_Dashboard/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kenan/source/repos/Generic_Employee_Dashboard/Generic_Employee_Dashboard/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kenan/source/repos/Generic_Employee_Dashboard/Generic_Employee_Dashboard/Projektarbete.HT2023/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UHJvamVrdGFyYmV0ZS5IVDIwMjNcUGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kenan/source/repos/Generic_Employee_Dashboard/Generic_Employee_Dashboard/Projektarbete.HT2023/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UHJvamVrdGFyYmV0ZS5IVDIwMjNcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
