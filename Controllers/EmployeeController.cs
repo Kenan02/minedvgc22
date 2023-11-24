@@ -23,6 +23,7 @@ namespace Generic_Employee_Dashboard.Controllers
 
         [HttpGet]
         public ActionResult<IEnumerable<Employee>> GetEmployees()
+        
         {
             try
             {
