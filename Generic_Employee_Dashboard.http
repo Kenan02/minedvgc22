@@ -1,6 +1,0 @@
-﻿@Generic_Employee_Dashboard_HostAddress = https://localhost:7143
-
-GET {{Generic_Employee_Dashboard_HostAddress}}/api/employee
-
-###
-

@@ -1,14 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Text.Json;
 using System;
 using System.Text.Json.Serialization;
 using System.Xml;
-using Newtonsoft.Json;
+
 
 namespace Generic_Employee_Dashboard.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class EmployeeController : ControllerBase
     {
@@ -29,6 +28,7 @@ namespace Generic_Employee_Dashboard.Controllers
             {
                 var employees = _employeeRepo.GetEmployees();
                 
+             
                 return Ok(employees);
             }
             catch (Exception ex)

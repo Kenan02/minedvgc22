@@ -25,15 +25,17 @@ namespace Generic_Employee_Dashboard
             {
                 connection.Open();
 
-                using (var command = new SQLiteCommand("SELECT Name, Email FROM Employee", connection))
+                using (var command = new SQLiteCommand("SELECT ID, Name FROM Employee", connection))
                 using (var reader = command.ExecuteReader())
                 {
                     while (reader.Read()) 
                     {
                         var employee = new Employee()
                         {
-                            Name = reader.GetString(0),
-                            Email = reader.GetString(1)
+                            ID = reader.GetInt32(0),
+                            Name = reader.GetString(1)
+                        
+                            
 
                         };
                         employees.Add(employee);

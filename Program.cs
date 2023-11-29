@@ -6,10 +6,12 @@ builder.Services.Configure<EmployeeRepoOptions>(options =>
     options.ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
 });
 
+
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddTransient<EmployeeRepo>();
+builder.Services.AddTransient<EmployeeInfoRepo>();
 
 var app = builder.Build();
 
