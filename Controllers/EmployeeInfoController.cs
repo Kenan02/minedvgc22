@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Generic_Employee_Dashboard.EmployeeMap;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Generic_Employee_Dashboard.Controllers
 {

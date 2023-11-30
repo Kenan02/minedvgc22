@@ -1,7 +1,7 @@
-using Generic_Employee_Dashboard;
+using Generic_Employee_Dashboard.EmployeeMap;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.Configure<EmployeeRepoOptions>(options =>
+builder.Services.Configure<EmployeeOverviewRepoOptions>(options =>
 {
     options.ConnectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
 });
@@ -10,8 +10,10 @@ builder.Services.Configure<EmployeeRepoOptions>(options =>
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddTransient<EmployeeRepo>();
-builder.Services.AddTransient<EmployeeInfoRepo>();
+builder.Services.AddTransient<EmployeeOverviewRepo>();
+
+
+
 
 var app = builder.Build();
 
@@ -30,7 +32,7 @@ app.UseRouting();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=EmployeeController}/{action=Index}/{id?}");
+    pattern: "{controller=EmployeeOverviewController}/{action=Index}/{id?}");
 
 
 

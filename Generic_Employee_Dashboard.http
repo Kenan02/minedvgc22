@@ -1,0 +1,29 @@
+﻿@Generic_Employee_Dashboard_HostAddress = https://localhost:7143
+
+GET {{Generic_Employee_Dashboard_HostAddress}}/employee
+
+###
+
+GET {{Generic_Employee_Dashboard_HostAddress}}/employeeoverview
+
+###
+
+GET {{Generic_Employee_Dashboard_HostAddress}}/employeeoverview
+
+###
+
+GET {{Generic_Employee_Dashboard_HostAddress}}/employeeoverview
+
+###
+
+GET {{Generic_Employee_Dashboard_HostAddress}}/employeeoverview
+
+###
+
+GET {{Generic_Employee_Dashboard_HostAddress}}/employeeoverview
+
+###
+
+GET {{Generic_Employee_Dashboard_HostAddress}}/employeeoverview
+
+###

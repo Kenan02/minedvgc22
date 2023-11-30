@@ -1,4 +1,4 @@
-﻿namespace Generic_Employee_Dashboard
+﻿namespace Generic_Employee_Dashboard.EmployeeMap
 {
     public class EmployeeInfo
     {
