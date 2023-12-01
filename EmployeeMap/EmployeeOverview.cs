@@ -7,6 +7,7 @@ namespace Generic_Employee_Dashboard.EmployeeMap
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public string Surname { get; set; }
         public string Salary { get; set; }
         public string Position { get; set; }
         public string Telephone { get; set; }
@@ -14,6 +15,7 @@ namespace Generic_Employee_Dashboard.EmployeeMap
         public string Adress { get; set; }
         public string Department { get; set; }
         public string StartDate { get; set; }
+        
 
     }
 }

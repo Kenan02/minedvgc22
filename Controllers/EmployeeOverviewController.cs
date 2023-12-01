@@ -18,14 +18,13 @@ namespace Generic_Employee_Dashboard.Controllers
         }
 
 
-        [HttpGet]
-        public ActionResult<IEnumerable<EmployeeOverview>> GetEmployees()
+        [HttpGet("{name}")]
+        public ActionResult<IEnumerable<EmployeeOverview>> GetEmployees(string name)
 
         {
-
             try
             {
-                var employees = _employeeOverviewRepo.GetEmployees(1);
+                var employees = _employeeOverviewRepo.GetEmployees(name);
 
                 return Ok(employees);
             }

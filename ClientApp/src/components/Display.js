@@ -11,9 +11,11 @@ export async function getEmployeeDataById(id) {
 
 function parseEmployeeDataById(data) {
     const employee = {
+        ID: data.id,
         Name: data.name,
         Telephone: data.telephone,
         Position: data.position,
+        Surname: data.surname,
         Department: data.department,
         Email: data.email,
         StartDate: data.startDate,
@@ -57,10 +59,19 @@ function ListComponentFunction({ id }) {
 
 export default function Window() {
 
+    const [search, setSearch] = useState('');
+
+    const handleSearch = (e) => {
+        setSearch(e.target.value);
+        console.log(search);
+    }
 
     return (
         <div>
-            <ListComponentFunction id={'/employeeoverview'} />
+            <input type="text" placeholder="Search.." className='navbar-search' onChange={handleSearch}>
+            </input>
+            
+            <ListComponentFunction id={'/employeeoverview/' + search} />
         </div>
 
     )

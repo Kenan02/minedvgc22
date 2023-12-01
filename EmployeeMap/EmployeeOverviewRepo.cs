@@ -15,7 +15,7 @@ namespace Generic_Employee_Dashboard.EmployeeMap
             _connectionString = options.Value.ConnectionString;
         }
 
-        public IEnumerable<EmployeeOverview> GetEmployees(int id)
+        public IEnumerable<EmployeeOverview> GetEmployees(string Name)
         {
 
             var employees = new List<EmployeeOverview>();
@@ -24,9 +24,9 @@ namespace Generic_Employee_Dashboard.EmployeeMap
             {
                 connection.Open();
 
-                using var command = new SQLiteCommand("SELECT ID, Name, Email, Telephone, Position, " +
-                "Adress, Department, StartDate FROM Employee JOIN EmployeeInfo ON Employee.ID = EmployeeInfo.EmployeeID WHERE Employee.ID = @id", connection);
-                command.Parameters.AddWithValue("id", id);
+                using var command = new SQLiteCommand("SELECT ID, Name, Surname, Email, Telephone, Position, " +
+                "Adress, Department, StartDate FROM Employee JOIN EmployeeInfo ON Employee.ID = EmployeeInfo.EmployeeID WHERE Employee.Name = @Name", connection);
+                command.Parameters.AddWithValue("Name", Name);
                 using var reader = command.ExecuteReader();
 
                 while (reader.Read())
@@ -35,12 +35,13 @@ namespace Generic_Employee_Dashboard.EmployeeMap
                     {
                         ID = reader.GetInt32(0),
                         Name = reader.GetString(1),
-                        Email = reader.GetString(2),
-                        Telephone = reader.GetString(3),
-                        Position = reader.GetString(4),
-                        Adress = reader.GetString(5),
-                        Department = reader.GetString(6),
-                        StartDate = reader.GetString(7),
+                        Surname = reader.GetString(2),
+                        Email = reader.GetString(3),
+                        Telephone = reader.GetString(4),
+                        Position = reader.GetString(5),
+                        Adress = reader.GetString(6),
+                        Department = reader.GetString(7),
+                        StartDate = reader.GetString(8),
 
                     };
                     employees.Add(employee);
