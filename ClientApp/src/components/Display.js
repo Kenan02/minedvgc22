@@ -13,12 +13,22 @@ function parseEmployeeDataById(data) {
     const employee = {
         ID: data.id,
         Name: data.name,
-        Telephone: data.telephone,
-        Position: data.position,
-        Surname: data.surname,
-        Department: data.department,
+        BirthDate: data.dateOfBirth,
+        Gender: data.gender,
         Email: data.email,
-        StartDate: data.startDate,
+        Telephone: data.telephone,
+        PrivatePhone: data.privatePhone,
+        Street: data.street,
+        City: data.city,
+        Zip: data.zip,
+        EmergencyName: data.emergencyName,
+        EmergencyPhoneNumber: data.emergencyPhoneNumber,
+        Relationship: data.relationship,
+        Street: data.street,
+        City: data.city,
+        Zip: data.zip,
+        Country: data.country,
+
     };
     console.log(employee);
     return employee;

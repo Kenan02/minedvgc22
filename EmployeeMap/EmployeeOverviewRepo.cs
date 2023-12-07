@@ -15,7 +15,7 @@ namespace Generic_Employee_Dashboard.EmployeeMap
             _connectionString = options.Value.ConnectionString;
         }
 
-        public IEnumerable<EmployeeOverview> GetEmployees(string Name)
+        public IEnumerable<EmployeeOverview> GetEmployees(int id)
         {
 
             var employees = new List<EmployeeOverview>();
@@ -24,9 +24,17 @@ namespace Generic_Employee_Dashboard.EmployeeMap
             {
                 connection.Open();
 
-                using var command = new SQLiteCommand("SELECT ID, Name, Surname, Email, Telephone, Position, " +
-                "Adress, Department, StartDate FROM Employee JOIN EmployeeInfo ON Employee.ID = EmployeeInfo.EmployeeID WHERE Employee.Name = @Name", connection);
-                command.Parameters.AddWithValue("Name", Name);
+                using var command = new SQLiteCommand("SELECT " +
+                    "Employee.ID, Employee.Name, Employee.Email, Employee.DateOfBirth, Employee.Gender, Employee.Telephone, Employee.PrivatePhone, " +
+                    "EmployeeInfo.Position, EmployeeInfo.Department, EmployeeInfo.StartDate, " +
+                    "EmergencyContacts.Name, EmergencyContacts.Telephone, EmergencyContacts.Relationship, " +
+                    "Adress.Street, Adress.City, Adress.Zip, Adress.Country " +
+                    "FROM Employee " +
+                    "JOIN EmployeeInfo ON Employee.ID = EmployeeInfo.EmployeeID " +
+                    "JOIN Adress ON Employee.AdressID = Adress.ID " +
+                    "JOIN EmergencyContacts ON Employee.EmergencyID = EmergencyContacts.ID " +
+                    "WHERE Employee.ID = @id", connection);
+                command.Parameters.AddWithValue("id", id);
                 using var reader = command.ExecuteReader();
 
                 while (reader.Read())
@@ -35,13 +43,21 @@ namespace Generic_Employee_Dashboard.EmployeeMap
                     {
                         ID = reader.GetInt32(0),
                         Name = reader.GetString(1),
-                        Surname = reader.GetString(2),
-                        Email = reader.GetString(3),
-                        Telephone = reader.GetString(4),
-                        Position = reader.GetString(5),
-                        Adress = reader.GetString(6),
-                        Department = reader.GetString(7),
-                        StartDate = reader.GetString(8),
+                        Email = reader.GetString(2),
+                        DateOfBirth = reader.GetString(3),
+                        Gender = reader.GetString(4),
+                        Telephone = reader.GetString(5),
+                        PrivatePhone = reader.GetString(6),
+                        Position = reader.GetString(7),
+                        Department = reader.GetString(8),
+                        StartDate = reader.GetString(9),
+                        EmergencyName = reader.GetString(10),
+                        EmergencyPhoneNumber = reader.GetString(11),
+                        Relationship = reader.GetString(12),
+                        Street = reader.GetString(13),
+                        City = reader.GetString(14),
+                        Zip = reader.GetString(15),
+                        Country = reader.GetString(16),
 
                     };
                     employees.Add(employee);
