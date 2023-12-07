@@ -7,7 +7,7 @@
         public string Department { get; set; }
         public int Salary { get; set; }
         public string Position { get; set; }
-        public DateTime StartDate { get; set; }
+        public string StartDate { get; set; }
         public int CertificateID { get; set; }
     }
 }
